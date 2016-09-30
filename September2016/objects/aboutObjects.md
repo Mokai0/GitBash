@@ -52,4 +52,4 @@ Ex:
       /the same applies to when calling the properties or methods of an object. To call a key that doesn't use any spaces or special characters simply use a "." (period/dot) to call that Object Literal.
       /however if the OL does contain any of the special conditions you must us [''] or [""] to call them
 #Constructor Funcitons
-  Object Literals are one of a kind objects - generally speaking they are good for a specific type of object versus multiple objects. 
+  Object Literals are one of a kind objects - generally speaking they are good for a specific type of object versus multiple objects.  
