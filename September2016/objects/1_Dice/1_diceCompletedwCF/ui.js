@@ -6,6 +6,6 @@ function printNumber(number) {
 var button = document.getElementById("button");
 
 button.onclick = function() {
-  var result = dumb.roll();
+  var result = superDumb;
   printNumber(result);
 };

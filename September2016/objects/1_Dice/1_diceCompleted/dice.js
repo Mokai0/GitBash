@@ -7,8 +7,8 @@
 }*/
 
 var dumb = {
-  sides: 6
-  roll: function diceRoll() {
+  sides: 6,
+  roll: function diceRoll () {
     var randomNumber = Math.floor(Math.random() * this.sides) + 1;
     //console.log(randomNumber);
     return randomNumber;

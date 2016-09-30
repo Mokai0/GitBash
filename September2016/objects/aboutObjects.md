@@ -52,4 +52,22 @@ Ex:
       /the same applies to when calling the properties or methods of an object. To call a key that doesn't use any spaces or special characters simply use a "." (period/dot) to call that Object Literal.
       /however if the OL does contain any of the special conditions you must us [''] or [""] to call them
 #Constructor Funcitons
-  Object Literals are one of a kind objects - generally speaking they are good for a specific type of object versus multiple objects. 
+  Object Literals are one of a kind objects - generally speaking they are good for a specific type of object or passing specific values to a function versus multiple objects (of the same kind).
+  Describes how an object should be created
+  Create similar objects
+  Each object created is known as an instance of that object type
+
+  function Contact(name, email) {
+    //this = {}; <-to symbolize that this is a constructor function and will technically not be included in the function or in the call of the function.
+    this.name = name;
+    this.email = email;
+    this.sendEmail = function() {/* Do something */}
+    //return this; <-not usually necessary
+  }
+      /this is a constructor function that allows us to create and object with the values of 'name' and 'email'
+  var contact = new Contact('Mokai', 'mokai86@gmail.com');
+      /here we're creating a new contact 'instance' - a specific realization of a particular type or object.
+  var contact = new Contact('DrMo', 'drmo44@gmail.com');
+      /here is a new contact instance. Using the 'new' keyword we can create a new 'instance'. The 'new' keyword allows us to utilize a function as a constructor function rather than calling the previously stored (or default) values for that function.
+
+\GAME THEORY - maybe constructor functions could be used to create new variables within games (items, monsters, etc) on the fly?
