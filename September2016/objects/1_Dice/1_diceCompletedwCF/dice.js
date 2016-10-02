@@ -36,12 +36,13 @@ var dumb = {
     }
 }*/ //this had an object at its focus wich won't work fo a constructor function. Instead I need to create it with the function as the focus.
 
-function superDumb(sides) {
+
+function game(sides) {
   this.sides = sides;
   this.roll = function () {
-    var randomNumber = Math.floor(math.random()*this.sides)+1;
+    var randomNumber  = Math.floor(Math.random()*this.sides)+1;
     return randomNumber;
   }
 }
 
-var superDumb = prompt('how many sides?');
+var dice = new game(prompt('pick a number'));
