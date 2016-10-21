@@ -1,1 +1,0 @@
-$(".animsition").animsition();
