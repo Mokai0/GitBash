@@ -1,16 +1,27 @@
 'use strict';
 
 var express = require('express'),
-	posts = require('./mock/posts.json');
+			posts = require('./mock/posts.json');
 
 var app = express();
 
-app.get('/', function(request, response){
-	response.send("<h1>Stupid Crazy Monkey!</h1>")
+app.set('view engine', 'pug');
+app.set('views', __dirname + '/templates')
+
+app.get('/', function(req, res){
+	res.render('index')
 });
 
-app.get('/blog', function(req, res){
-	res.send(posts)
+app.get('/blog/:title?', function(req, res){
+	var title = req.params.title;
+	if (title === undefined){
+		res.status(503);
+		res.send("This page is under construction!");
+	} else {
+		var post = posts[title] || {};
+		res.render('post', { post: post});
+		//res.send(posts);
+	}
 });
 
 app.listen(3000, function(){
