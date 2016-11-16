@@ -1,4 +1,5 @@
 var express = require('express');
+//A fancy way to modularize the app
 var router = express.Router();
 
 /* GET home page. */
