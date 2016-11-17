@@ -10,13 +10,13 @@ angular.module("todoListApp")
     .then(callback);
   };
 
-  this.deleteTodo = function(todo) {
+  this.deleteTodos = function(todo) {
     console.log("The "+ todo.name +" todo has been deleted!");
     // other logic
   };
 
-  this.saveTodo = function(todo) {
-    console.log("The "+ todo.name +" todo has been saved!")
+  this.saveTodos = function(todos) {
+    console.log(todos.length +" tasks have been saved!")
     // other logic
   };
 
