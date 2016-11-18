@@ -6,7 +6,7 @@ angular.module('todoListApp')
     $scope.todos.splice(index, 1);
     dataService.deleteTodo(todo);
   };
-  
+
   $scope.saveTodos = function() {
     var filteredTodos = $scope.todos.filter(function(todo){
       if(todo.edited) {
@@ -14,5 +14,11 @@ angular.module('todoListApp')
       };
     })
     dataService.saveTodos(filteredTodos);
-  }; 
+  };
+
+  $scope.resetTodoState = function() {
+    $scope.todos.forEach(function(todo) {
+      todo.edited = false;
+    });
+  };
 });
