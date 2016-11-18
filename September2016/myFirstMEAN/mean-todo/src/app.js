@@ -1,6 +1,6 @@
 'use strict';
 
-debugger;
+// debugger;
 
 var express = require('express');
 
@@ -9,6 +9,7 @@ var router = require('./api');
 var app = express();
 
 require('./database');
+require('./seed');
 
 app.use('/', express.static('public'));
 
