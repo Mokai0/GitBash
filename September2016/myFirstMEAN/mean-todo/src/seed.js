@@ -6,7 +6,7 @@ var todos = [
   'workout a lot',
   'play ball with friends',
   'game on bf4'
-]
+];
 
 todos.forEach(function(todo, index) {
   Todo.find({'name': todo}, function (err, todos) {
